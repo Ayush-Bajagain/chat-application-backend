@@ -33,7 +33,7 @@ pipeline {
                 docker rm $APP_NAME || true
                 docker run -d \
                   --name $APP_NAME \
-                  -p 8080:8080 \
+                  -p 8888:8888 \
                   $DOCKER_IMAGE
                 '''
             }

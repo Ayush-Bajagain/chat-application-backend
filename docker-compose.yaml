@@ -3,7 +3,7 @@ services:
     build: .
     container_name: chat-app-backend
     ports:
-      - "8080:8080"
+      - "8888:8888"
     environment:
       SPRING_DATA_MONGODB_URI: mongodb://mongo:27017/chatapp
     depends_on:
