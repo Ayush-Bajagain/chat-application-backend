@@ -16,7 +16,10 @@ pipeline {
 
         stage('Build Jar') {
             steps {
-                sh 'mvn clean package -DskipTests'
+                // Use Jenkins-managed Maven
+                withMaven(maven: 'maven') {
+                    sh 'mvn clean package -DskipTests'
+                }
             }
         }
 
